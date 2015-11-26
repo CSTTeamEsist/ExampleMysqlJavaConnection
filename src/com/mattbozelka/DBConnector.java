@@ -20,7 +20,7 @@ public class DBConnector {
     		Class.forName("com.mysql.jdbc.Driver");
     		connect = DriverManager
     		          .getConnection("jdbc:mysql://localhost/CLEANUPSTARS?"
-    		              + "user=root&password=");
+    		              + "user={username}&password{password}");
     		
     		statement = connect.createStatement();
     		
@@ -33,7 +33,7 @@ public class DBConnector {
     		throw e;
     		
     	}finally{
-    		
+    		closeDB();
     	}
     }
     

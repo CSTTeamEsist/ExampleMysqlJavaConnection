@@ -19,7 +19,6 @@ public class LauncherTest {
     		
     	}
     	
-    	db.closeDB();
     	
     	System.out.println();
 
