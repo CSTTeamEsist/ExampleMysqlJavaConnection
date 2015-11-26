@@ -1,6 +1,7 @@
 package com.mattbozelka;
 
 import java.sql.Connection;
+import com.mattbozelka.DBConfig;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,9 +19,7 @@ public class DBConnector {
     	try {
     		
     		Class.forName("com.mysql.jdbc.Driver");
-    		connect = DriverManager
-    		          .getConnection("jdbc:mysql://localhost/CLEANUPSTARS?"
-    		              + "user={username}&password{password}");
+    		connect = DriverManager.getConnection(DBConfig.CONNECTION);
     		
     		statement = connect.createStatement();
     		

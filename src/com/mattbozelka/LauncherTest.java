@@ -1,6 +1,7 @@
 package com.mattbozelka;
 
 import java.sql.ResultSet;
+import com.mattbozelka.DBConfig;
 
 
 public class LauncherTest {
